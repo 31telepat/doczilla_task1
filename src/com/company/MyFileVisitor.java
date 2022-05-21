@@ -23,4 +23,6 @@ public class MyFileVisitor extends SimpleFileVisitor<Path> {
     public List<Path> getListPathTextFiles(){
         return listPathTextFiles;
     }
+
+
 }
