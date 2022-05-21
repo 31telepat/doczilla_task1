@@ -10,14 +10,17 @@ import java.util.List;
 
 public class MyFileVisitor extends SimpleFileVisitor<Path> {
 
-    List<String> textedFiles = new ArrayList<>();
+    private List<Path> listPathTextFiles = new ArrayList<>();
 
     @Override
     public FileVisitResult visitFile(Path path, BasicFileAttributes attrs) throws IOException {
-
-        if(path.toString().endsWith(".txt") || path.toString().endsWith(".doc") || path.toString().endsWith(".docx"))
-            textedFiles.add(path.toString());
-        System.out.println(textedFiles);
+        if(path.toString().endsWith(".txt") || path.toString().endsWith(".doc") || path.toString().endsWith(".docx")) {
+            listPathTextFiles.add(path);
+        }
         return FileVisitResult.CONTINUE;
+    }
+
+    public List<Path> getListPathTextFiles(){
+        return listPathTextFiles;
     }
 }
