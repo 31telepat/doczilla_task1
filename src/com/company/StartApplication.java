@@ -11,12 +11,15 @@ public class StartApplication {
 
     public static void main(String[] args) throws IOException {
 
+        //choose the folder for searching:
+        String selectFolder = "D:\\IT\\testfolder";
+
         //create folder and result file if not exist
         CreateFile createFile = new CreateFile();
         createFile.createFile();
 
         //select folder to find files
-        Path source = Paths.get("D:\\IT\\testfolder");
+        Path source = Paths.get(selectFolder);
 
         //select texted files
         MyFileVisitor visitor = new MyFileVisitor();

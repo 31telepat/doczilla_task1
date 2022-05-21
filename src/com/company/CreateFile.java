@@ -5,7 +5,7 @@ import java.nio.file.*;
 
 public class CreateFile {
 
-    Path pathOfResultDirectory = Paths.get("D:\\resultfolder");
+     Path pathOfResultDirectory = Paths.get("D:\\resultfolder");
      Path pathOfResultFile = Paths.get("D:\\resultfolder\\resultfile.txt");
 
     public  Path getPathOfResultFile() {
